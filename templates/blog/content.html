@@ -1,0 +1,24 @@
+{% extends 'blog/titles.html' %}
+
+{% block content %}
+    <div class="row text-center">
+        <h1>{{ article.title }}</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <p class="text-center">
+        <span>
+            {{ article.author }}
+        </span>
+                <span style="margin-left: 20px">
+            {{ pub_date }}
+        </span>
+            </p>
+            <div>
+                {{ article.content }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

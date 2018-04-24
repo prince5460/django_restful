@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<ul>
+    {% block content %}
+        <div class="row text-center">
+            <h1>我的博客</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <ul>
+                    {% for blog in blogs %}
+                        <li><a href="{{ blog.id }}">{{ blog.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endblock %}
+    </body>
+</html>
